@@ -90,7 +90,7 @@ if (employeeForm) {
   const goToLoginBtn = document.getElementById("goToLoginBtn");
   if (goToLoginBtn) {
     goToLoginBtn.addEventListener("click", () => {
-      window.location.href = "login.html";
+      window.location.href = "Login.html";
     });
   }
 }
