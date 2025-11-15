@@ -1,0 +1,151 @@
+/* ---------- GLOBAL STYLES ---------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74abe2, #5563de);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+  padding: 10px; /* helps on very small screens */
+}
+
+/* ---------- FORM CONTAINER ---------- */
+.form-container {
+  background-color: #fff;
+  width: 400px;
+  max-width: 100%;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- FORM HEADER ---------- */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #334;
+}
+
+/* ---------- FORM GROUP ---------- */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* ---------- INPUTS ---------- */
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: border 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #5563de;
+  background-color: #fff;
+  outline: none;
+}
+
+/* ---------- DROPDOWN STYLING ---------- */
+select {
+  appearance: none; /* Removes default browser arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%235563de' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #3b49df;
+}
+
+/* ---------- BUTTON GROUP ---------- */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ---------- BUTTON BASE STYLES ---------- */
+.button-group button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+/* Primary button (Register) */
+.button-group button[type="submit"] {
+  background-color: #5563de;
+  color: #fff;
+}
+
+.button-group button[type="submit"]:hover {
+  background-color: #3b49df;
+}
+
+/* Secondary button (Go to Login) */
+#goToLoginBtn {
+  background-color: #fff;
+  color: #5563de;
+  border: 1px solid #5563de;
+}
+
+#goToLoginBtn:hover {
+  background-color: #5563de;
+  color: #fff;
+}
+
+/* ---------- STATUS MESSAGE ---------- */
+.message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}
